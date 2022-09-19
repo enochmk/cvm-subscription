@@ -26,7 +26,7 @@ const subscribeProductApi = async (msisdn: string, productID: number) => {
 		},
 	};
 
-	const requestID = rtracer.id() || Date.now().toString();
+	const requestID = Date.now().toString();
 	const soapRequest = `
 		<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bus="http://www.huawei.com/bme/cbsinterface/cbs/businessmgrmsg" xmlns:com="http://www.huawei.com/bme/cbsinterface/common" xmlns:bus1="http://www.huawei.com/bme/cbsinterface/cbs/businessmgr">
 				<soapenv:Header/>
