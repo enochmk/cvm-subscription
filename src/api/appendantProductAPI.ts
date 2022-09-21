@@ -1,7 +1,6 @@
 import config from 'config';
 import axios from 'axios';
 import xml2js from 'xml2js';
-import rtracer from 'cls-rtracer';
 import { IContext } from '../interfaces/ILogger';
 import appMessages from '../messages/app.messages';
 import HttpError from '../utils/errors/HttpError';

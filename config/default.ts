@@ -8,7 +8,7 @@ export default {
 	logger: {
 		console: true,
 		level: process.env.LOGGER_LEVEL || 'verbose',
-		dirname: `${process.env.LOG_DIRECTORY || 'logs'}`,
+		dirname: `${process.env.LOG_DIRECTORY}`,
 		datePattern: 'YYYYMMDD',
 	},
 	api: {
@@ -23,5 +23,5 @@ export default {
 			username: process.env.SMS_USERNAME,
 			password: process.env.SMS_PASSWORD,
 		},
-	}
+	},
 };
