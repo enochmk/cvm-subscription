@@ -5,14 +5,14 @@ import 'winston-daily-rotate-file';
 import * as logFormatter from './formats';
 
 const datePattern = config.get('logger.datePattern') as string;
-const dirname = config.get('logger.dirname') as string;
+const logDirectory = config.get('logger.logDirectory') as string;
 const level = config.get('logger.level') as string;
 
 const transports: Array<any> = [
 	new winston.transports.DailyRotateFile({
 		level,
 		datePattern,
-		dirname,
+		dirname: logDirectory,
 		filename: '%DATE%.log',
 		format: winston.format.combine(logFormatter.json),
 	}),

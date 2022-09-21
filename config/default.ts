@@ -8,7 +8,8 @@ export default {
 	logger: {
 		console: true,
 		level: process.env.LOGGER_LEVEL || 'verbose',
-		dirname: `${process.env.LOG_DIRECTORY}`,
+		service: process.env.APP_SERVICE,
+		logDirectory: process.env.LOG_DIRECTORY,
 		datePattern: 'YYYYMMDD',
 	},
 	api: {
